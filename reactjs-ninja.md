@@ -1,12 +1,12 @@
 # INDEX
 
-- [Notes](#notes)
-- [Setup](#Setup)
-- [Start](#Start)
-- [Components](#Components)
-- [Inline style](#inline-style)
-- [Handling Events](#handling-events)
-- ["State" Component State](#states)
+1) [Notes](#notes)
+1) [Setup](#Setup)
+1) [Start](#Start)
+1) [Components](#Components)
+1) [Inline style](#inline-style)
+1) [Handling Events](#handling-events)
+1) ["State" Component State](#states)
 ___
 <br><br><br>
 
@@ -27,6 +27,7 @@ code --install-extension esbenp.prettier-vscode
 
 - emmet js
 - [ninja's repo](https://github.com/iamshaunjp/Complete-React-Tutorial.git)
+- [react-dev tools](https://addons.mozilla.org/en-GB/firefox/addon/react-devtools/)
 ___
 <br><br><br>
 
@@ -77,3 +78,23 @@ ___
 
 ## The data being used in the component at that point of time
 
+- the var isn reactive meaning
+- react doesn't watch it for changes
+- that's where we use 'useState' hook
+- Hooks are special functions that do a ceratin job
+- notice 'use' and 'set'
+
+<br>
+
+### demo
+
+```js
+import {useState} from 'react'
+...
+const [count, setCount] = useState(0)
+...
+<button onClick={_ => setCount(count + 1)}>click me</button>
+```
+<!-- ___
+<br><br><br>
+ -->
