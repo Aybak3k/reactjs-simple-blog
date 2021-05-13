@@ -7,6 +7,8 @@
 1) [Inline style](#inline-style)
 1) [Handling Events](#handling-events)
 1) ["State" Component State](#states)
+1) [Lists (Arrays) mapping (outputting) XD (LOL)](#lists-mapping)
+1) [Props](#props)
 ___
 <br><br><br>
 
@@ -95,6 +97,26 @@ const [count, setCount] = useState(0)
 ...
 <button onClick={_ => setCount(count + 1)}>click me</button>
 ```
-<!-- ___
+___
 <br><br><br>
- -->
+
+# <span id="lists-mapping">Lists (Arrays) mapping (outputting) XD (LOL)</span>
+
+```jsx
+{blogs.map((blog) => (
+    <div className="blog-preview" key={blog.id}>
+        <h2>{blog.title}</h2>
+        <p>written by {blog.author}</p>
+    </div>
+))}
+```
+___
+<br><br><br>
+
+# Props
+
+- (props) == ({ blogs, title })
+    - const varUsed = props.propUsed
+- property name on the tag
+___
+<br><br><br>
