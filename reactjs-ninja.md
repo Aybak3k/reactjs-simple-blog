@@ -9,6 +9,10 @@
 1) ["State" Component State](#states)
 1) [Lists (Arrays) mapping (outputting) XD (LOL)](#lists-mapping)
 1) [Props](#props)
+1) [useEffect](#useeffect)
+1) [JSON Server](#json-server)
+1) [Condional Loading Msg](#loading-msg)
+1) [Handling Fetch Error](#e-handle)
 ___
 <br><br><br>
 
@@ -118,5 +122,49 @@ ___
 - (props) == ({ blogs, title })
     - const varUsed = props.propUsed
 - property name on the tag
+- functions as props => defined in home.js (hanlder())
 ___
 <br><br><br>
+
+# useEffect
+
+- runs a fucntion every render happens (state changing)
+- second argu if empty arr => only on 1st render
+- to watch for a specific var changes => [varName]
+___
+<br><br><br>
+
+# <span id="json-server">JSON Server</span>
+
+- root/data/db.json
+- npx json-server --watch data/db.json --port 5000
+- 3steps
+    - setVal(null)
+    - useEffect => fetch
+        ```js
+        fetch('http://localhost:5000/blogs')
+        .then(res => res.json())
+        .then(data => setBlogs(data))
+        ```
+    - conditional templating => document.write(true && 5)
+___
+<br><br><br>
+
+# <span id="loading-msg">Condional loading msg</span>
+
+- useState => setVal(true)
+- update it to false
+- conditional templating => Loading...
+___
+<br><br><br>
+
+# <span id="e-handle">Handling Fetch Errors</span>
+
+- ```js .catch(err => console.log(err.message))```
+- ```js if (!res.ok) throw Error('wrong resource')```
+- _OR_ output it to some state
+- _AND_ check the other _then_ state _ok_ status
+<!-- ___
+<br><br><br>
+
+#  -->
