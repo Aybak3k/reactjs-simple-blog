@@ -13,6 +13,8 @@
 1) [JSON Server](#json-server)
 1) [Condional Loading Msg](#loading-msg)
 1) [Handling Fetch Error](#e-handle)
+1) [Custom Hooks](#custom-hooks)
+1) [React Routers](#routers)
 ___
 <br><br><br>
 
@@ -137,7 +139,7 @@ ___
 # <span id="json-server">JSON Server</span>
 
 - root/data/db.json
-- npx json-server --watch data/db.json --port 5000
+- ``` npx json-server --watch data/db.json --port 5000```
 - 3steps
     - setVal(null)
     - useEffect => fetch
@@ -160,10 +162,43 @@ ___
 
 # <span id="e-handle">Handling Fetch Errors</span>
 
-- ```js .catch(err => console.log(err.message))```
-- ```js if (!res.ok) throw Error('wrong resource')```
+- ``` .catch(err => console.log(err.message))```
+- ``` if (!res.ok) throw Error('wrong resource')```
 - _OR_ output it to some state
 - _AND_ check the other _then_ state _ok_ status
+___
+<br><br><br>
+
+# <span id="custom-hooks">Custom Hooks</span>
+
+- ``` const {data: blogs, isPending, error} = useFetch('http://localhost:5000/blogs') ```
+- ``` return {data, isPending, error} ```
+___
+<br><br><br>
+
+# <span id="routers">React Routers!!</span>
+
+- setup
+    - ``` npm i react-router-dom ```
+    - ``` import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; ```
+- wrap the App.js returned template with _Router_
+- example routes:
+    ```jsx
+    <Switch>
+        <Route exact path="/">
+            <Home />
+        </Route>
+        <Route path="/create">
+            <Create />
+        </Route>
+    </Switch>
+    ```
+- Router Links
+    ```jsx
+        import {Link} from 'react-router-dom'
+        <Link to="/">Home</Link>
+        <Link to="/create">New Blog</Link>
+    ```
 <!-- ___
 <br><br><br>
 
