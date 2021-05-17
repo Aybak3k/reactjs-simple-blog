@@ -15,6 +15,8 @@
 1) [Handling Fetch Error](#e-handle)
 1) [Custom Hooks](#custom-hooks)
 1) [React Routers](#routers)
+1) [useEffext Cleanup](#clean-up)
+1) [Route Parameters](#route-para)
 ___
 <br><br><br>
 
@@ -199,7 +201,19 @@ ___
         <Link to="/">Home</Link>
         <Link to="/create">New Blog</Link>
     ```
-<!-- ___
+___
 <br><br><br>
 
-#  -->
+# <span id="clean-up">useEffext Cleanup</span>
+
+- ``` const abortCont =  new AbortController() ```
+- ``` fetch(url, {signal: abortCont.signal}) ```
+- ``` return _ => abortCont.abort() ```
+- ``` if (err.name === "AbortError") ```
+___
+<br><br><br>
+
+# <span id="route-para">Route Parameters</span>
+
+- ``` path="/blogs/:sameId" ```
+- ``` const {sameId} = useParams() ```
