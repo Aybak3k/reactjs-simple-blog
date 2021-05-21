@@ -37,3 +37,5 @@ export default App;
 // - delete node_modules and package-lock
 // - npm install
 // - _then_ npm start
+
+// npx json-server --watch data/db.json --port 5000
