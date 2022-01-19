@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/reactjs-simple-blog/static/css/main.d068e2d6.chunk.css",
+    "main.js": "/reactjs-simple-blog/static/js/main.603f50cb.chunk.js",
+    "main.js.map": "/reactjs-simple-blog/static/js/main.603f50cb.chunk.js.map",
+    "runtime-main.js": "/reactjs-simple-blog/static/js/runtime-main.df8196db.js",
+    "runtime-main.js.map": "/reactjs-simple-blog/static/js/runtime-main.df8196db.js.map",
+    "static/js/2.3e5a5550.chunk.js": "/reactjs-simple-blog/static/js/2.3e5a5550.chunk.js",
+    "static/js/2.3e5a5550.chunk.js.map": "/reactjs-simple-blog/static/js/2.3e5a5550.chunk.js.map",
+    "index.html": "/reactjs-simple-blog/index.html",
+    "static/css/main.d068e2d6.chunk.css.map": "/reactjs-simple-blog/static/css/main.d068e2d6.chunk.css.map",
+    "static/js/2.3e5a5550.chunk.js.LICENSE.txt": "/reactjs-simple-blog/static/js/2.3e5a5550.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df8196db.js",
+    "static/js/2.3e5a5550.chunk.js",
+    "static/css/main.d068e2d6.chunk.css",
+    "static/js/main.603f50cb.chunk.js"
+  ]
+}
